@@ -12,7 +12,7 @@ async function fetchWeather(location) {
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=119ed74a23e4f5335ac1fb44359fe2f3&units=metric`
   );
   const jsonWeather = await weatherResponse.json();
-  console.log(jsonWeather.main.humidity);
+  console.log(jsonWeather);
   const thingstoDisplay = [
     jsonWeather.name,
     jsonWeather.weather[0],
@@ -25,7 +25,6 @@ async function fetchWeather(location) {
 function displayResults(data) {
   const table = document.querySelector(".display-results");
   const [city, weatherDescription, temp, humidity] = data;
-  console.log(city, weatherDescription.main);
   table.innerHTML = `
   <tr>
     <th>City</th>
@@ -34,10 +33,22 @@ function displayResults(data) {
     <th>Humidity</th>
   </tr>
   <tr>
-  <td>${city}</td>
-  <td>${weatherDescription.main}</td>
-  <td>${temp}°C</td>
-  <td>${humidity}%</td>
+    <td>${city}</td>
+    <td>${weatherDescription.main}</td>
+    <td>${temp}°C</td>
+    <td>${humidity}%</td>
+  </tr>
+  `;
+}
+
+function displayForecast(data) {
+  const forecastTable = document.querySelector(".week-forecast");
+  forecastTable.innerHTML = `
+  <tr>
+    <th></th>
+  </tr>
+  <tr>
+    <td></td>
   </tr>
   `;
 }
