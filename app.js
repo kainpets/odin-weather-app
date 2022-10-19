@@ -30,7 +30,7 @@ function displayResults(data) {
   <tr>
     <th>City</th>
     <th>Weather</th>
-    <th>Temperature</th>
+    <th>Current Temperature</th>
     <th>Humidity</th>
   </tr>
   <tr>
