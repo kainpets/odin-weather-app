@@ -7,3 +7,15 @@ async function fetchWeather() {
 }
 
 fetchWeather();
+
+function getLocation() {
+  const searchBar = document.querySelector("#search-bar");
+  const submitBtn = document.querySelector(".submit-btn");
+  submitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    const location = searchBar.value;
+    console.log(location);
+  });
+}
+
+getLocation();
