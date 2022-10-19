@@ -24,8 +24,8 @@ async function fetchWeather(location) {
 
 function displayResults(data) {
   const table = document.querySelector(".display-results");
-  const [city, rest, temp, humidity] = data;
-  console.log(city, rest.main);
+  const [city, weatherDescription, temp, humidity] = data;
+  console.log(city, weatherDescription.main);
   table.innerHTML = `
   <tr>
     <th>City</th>
@@ -35,7 +35,7 @@ function displayResults(data) {
   </tr>
   <tr>
   <td>${city}</td>
-  <td>${rest.main}</td>
+  <td>${weatherDescription.main}</td>
   <td>${temp}°C</td>
   <td>${humidity}%</td>
   </tr>

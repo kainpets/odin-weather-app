@@ -1,4 +1,5 @@
 Weather app project from the Odin Project
 Built with html, css, js.
 
-TODO Add live preview
+Live preview:
+https://kainpets.github.io/odin-weather-app/
